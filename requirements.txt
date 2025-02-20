@@ -1,0 +1,9 @@
+transformers==4.43.2
+accelerate==0.31.0
+datasets==2.20.0
+sentencepiece
+sacrebleu
+evaluate
+scikit-learn
+sqlitedict
+peft
