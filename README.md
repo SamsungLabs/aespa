@@ -20,6 +20,8 @@ The current release includes the following features:
  - `learn_rounding`: whether to learn weight-rounding policy based on AdaRound
     - `lr`, `round_weight`, `round_weight_qkv`, `num_iters`: AdaRound hyperparameters
 
+For more details on other arguments, please refer to [utils.py](utils.py).
+
 ## Examples
  - OPT Model Quantization
 
