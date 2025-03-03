@@ -21,8 +21,30 @@ The current release includes the following features:
     - `lr`, `round_weight`, `round_weight_qkv`, `num_iters`: AdaRound hyperparameters
 
 ## Examples
- - OPT Model Quantization (results w/ H100 GPU - wikitext2: 69.813, ptb-new: 100.23, c4-new: 56.377)
+ - OPT Model Quantization
 
-  ```
-  python main.py --model_path facebook/opt-125m --calib_data c4 --nsamples 128 --seqlen 2048 --seed 0 --w_bits 2 --block_v --use_zfold --optq_init --act_order --learn_rounding
-  ```
+| Dataset | PPL (w/ H100 GPU) |
+|--------------------|-----------------------|
+| wikitext2          | 69.813                |
+| ptb-new            | 100.23                |
+| c4-new             | 56.377                |
+
+```bash
+python main.py --model_path facebook/opt-125m --calib_data c4 --nsamples 128 --seqlen 2048 --seed 0 --w_bits 2 --block_v --use_zfold --optq_init --act_order --learn_rounding
+```
+
+## License
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/) (CC BY-NC).
+
+## Citation
+If you find this work is useful for your research, please cite our paper:
+```
+@inproceedings{kim2024aespa,
+ title = {Towards Next-Level Post-Training Quantization of Hyper-Scale Transformers},
+ author = {Kim, Junhan and Lee, Chungman and Cho, Eulrang and Park, Kyungphil and Kim, Ho-young and Kim, Joonyoung and Jeon, Yongkweon},
+ booktitle = {Advances in Neural Information Processing Systems},
+ pages = {94292--94326},
+ volume = {37},
+ year = {2024}
+}
+```
